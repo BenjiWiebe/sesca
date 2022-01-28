@@ -3,7 +3,7 @@ require 'json'
 require 'pry'
 
 bars = /^\d{4} \d{4}$/
-units = /^[A-Z]{1,3} \d{3}/
+units = /^[A-Z]{1,3} \d{2,3}/
 
 obj = JSON.parse(File.read("sesca_out.json"), {symbolize_names: true})
 
