@@ -1,2 +1,3 @@
 username: user@example.org
 password: password
+selenium_remote_ip: 192.168.0.2
