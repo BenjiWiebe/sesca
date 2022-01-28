@@ -8,7 +8,7 @@ require 'yaml'
 cfgfile = 'sesca.config'
 cfg = YAML.load(File.open(cfgfile).read)
 username = cfg["username"]
-password = cfg["psssword"]
+password = cfg["password"]
 selenium_remote_ip = cfg["selenium_remote_ip"]
 
 if [selenium_remote_ip,password,username].include?(nil)
