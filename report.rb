@@ -5,7 +5,7 @@ require 'pry'
 
 # This is the array of order numbers (prefixed with SO to match SCA) to be excluded from the back-order report
 ignore_orders = ['SO154761']
-units_bars_only = true
+units_bars_only = false
 html_output = true
 
 datafile = "sesca_out.json"
@@ -46,7 +46,7 @@ end
 last_update_time = File.mtime(datafile)
 
 if html_output
-	print '<!DOCTYPE html><html><head><link rel="stylesheet" href="report.css" /><title>SCA back-order report</title></head><body><table><tbody>'
+	print '<!DOCTYPE html><html><head><link rel="stylesheet" href="report.css" /><title>SCA on-order report</title></head><body><table><tbody>'
 	print '<tr><th>Quantity</th><th>Model/part number</th></tr>'
 	of_interest.sort.each do |k,v|
 		print "<tr><td>#{v}</td><td>#{k}</td>"
